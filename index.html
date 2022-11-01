@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600" rel="stylesheet" type="text/css">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <title>Budgety</title>
+</head>
+
+<body>
+
+    <div class="top">
+        <div class="budget">
+            <div class="budget__title">
+                Available Budget in <span class="budget__title--month">November</span>:
+            </div>
+
+            <div class='difference clearfix'>Total Budget <span id="total-budget"> </span> </div>
+
+            <div class="budget__income clearfix">
+                <div class="budget__income--text">Income</div>
+                <div class="right">
+                    <div class="budget__income--value">+ <span class="inc-val"></span></div>
+                    <div id="inc-percent">&nbsp;</div>
+                </div>
+            </div>
+
+            <div class="budget__expenses clearfix">
+                <div class="budget__expenses--text">Expenses</div>
+                <div class="right clearfix">
+                    <div class="budget__expenses--value">- <span class="exp-val"></span></div>
+                    <div><span id="exp-percent"></span> %</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bottom">
+
+        <div class="add">
+            <div class="add__container">
+                <select class="add__type">
+                    <option value="inc" selected>+</option>
+                    <option value="exp">-</option>
+                </select>
+                <input type="text" class="add__description" placeholder="Add description">
+                <input type="number" class="add__value" placeholder="Value">
+                <button class="btn btn-success" id="add-btn"> Add Item</button>
+                <button class=" btn btn-warning" id="clear">Clear All</button>
+            </div>
+        </div>
+
+        <div class="container clearfix">
+            <div class="income">
+                <h2 class="income__title">Income</h2>
+                <table class="item-table table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Percentage</th>
+                            <th>Button</th>
+                        </tr>
+
+                    </thead>
+                    <tbody id="income-list">
+
+                    </tbody>
+                </table>
+
+
+            </div>
+
+
+
+            <div class="expenses">
+                <h2 class="expenses__title">Expenses</h2>
+
+                <table class="item-table table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                            <th>Percentage</th>
+                            <th>Button</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expenses-list">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <!-- <div class="modal fade" id="reg-modal" tabindex="-1" area-labelledby="modal title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title"> Are you sure you want to clear the ledger?</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p> You won't be able to recover your data</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary">Clear Data</button>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
